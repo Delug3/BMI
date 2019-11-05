@@ -7,125 +7,152 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:ems="6"
+        android:hint="Name..."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <!--Custom Spinner-->
+
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="Calculate Your Body Mass Index"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="38dp"
-        android:layout_marginRight="38dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="13dp"
         android:gravity="center_horizontal"
         android:text="Weight"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/weightEditText"
-        app:layout_constraintEnd_toEndOf="@+id/weightEditText" />
-
-    <EditText
-        android:id="@+id/weightEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
-        android:ems="6"
-        android:inputType="number|numberDecimal"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/heightEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/heightEditText" />
-
-    <EditText
-        android:id="@+id/nameEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
-        android:ems="6"
-        android:textSize="20sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/genderEditText"
-        app:layout_constraintEnd_toStartOf="@+id/genderEditText"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/customSpinnerWeight"
+        app:layout_constraintStart_toStartOf="@+id/customSpinnerWeight" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="13dp"
         android:gravity="center_horizontal"
         android:text="Height"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/heightEditText"
-        app:layout_constraintEnd_toEndOf="@+id/heightEditText" />
+        app:layout_constraintBottom_toTopOf="@+id/customSpinnerHeight"
+        app:layout_constraintStart_toStartOf="@+id/customSpinnerHeight" />
 
-    <EditText
-        android:id="@+id/heightEditText"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/customSpinnerHeight"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="322dp"
-        android:ems="6"
-        android:inputType="number|numberDecimal"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/weightEditText" />
-
-    <EditText
-        android:id="@+id/genderEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="119dp"
-        android:ems="6"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nameEditText"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/calculator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
-        android:onClick="calcBMI"
-        android:text="CALCULATE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heightEditText" />
-
-    <TextView
-        android:id="@+id/resultButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="63dp"
-        android:gravity="center_horizontal"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginBottom="28dp"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/nameEditText"
-        app:layout_constraintStart_toStartOf="@+id/nameEditText" />
+        android:layout_gravity="center"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:elevation="07dp"
+        android:fitsSystemWindows="true"
+        android:padding="10dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/customSpinnerGender"
+        app:layout_constraintStart_toEndOf="@+id/customSpinnerWeight"
+        app:layout_constraintTop_toTopOf="@+id/customSpinnerWeight" />
 
     <TextView
         android:id="@+id/gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="13dp"
         android:text="Gender"
-        app:layout_constraintBottom_toTopOf="@+id/genderEditText"
-        app:layout_constraintEnd_toEndOf="@+id/genderEditText"
-        app:layout_constraintStart_toStartOf="@+id/genderEditText" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/customSpinnerGender"
+        app:layout_constraintStart_toStartOf="@+id/customSpinnerGender" />
+
+    <Spinner
+        android:id="@+id/customSpinnerGender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:elevation="07dp"
+        android:fitsSystemWindows="true"
+        android:padding="10dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/customSpinnerHeight"
+        app:layout_constraintTop_toTopOf="@+id/customSpinnerHeight" />
+
+    <Spinner
+        android:id="@+id/customSpinnerWeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:elevation="07dp"
+        android:fitsSystemWindows="true"
+        android:padding="10dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/customSpinnerHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:text="Enter Personal Detail"
+        android:textColor="#3F51B5"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/customSpinnerGender"
+        app:layout_constraintStart_toStartOf="@+id/nameEditText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/calculationImageButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="202dp"
+        android:onClick="calcBMI"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customSpinnerHeight"
+        app:srcCompat="@drawable/calculate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
