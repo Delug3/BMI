@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BMI</string>
+    <string name="very_severely_underweight">Very Severely UnderWeight</string>
+    <string name="severely_underweight">Severely UnderWeight</string>
+    <string name="underweight">UnderWeight</string>
+    <string name="normal">Normal</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese_class_1">Obese, Class 1</string>
+    <string name="obese_class_2">Obese, Class 2</string>
+    <string name="obese_class_3">Obese, Class 3</string>
+
+</resources>
